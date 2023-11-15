@@ -5,6 +5,13 @@
 #include "reclamation.h"
 #include "connection.h"
 #include <QMessageBox>
+#include "qrcode.h"
+#include <QtSvg/QSvgRenderer>
+#include <fstream>
+#include <QPainter>
+#include <QPdfWriter>
+#include <QDesktopServices>
+#include <QtCharts>
 
 
 QT_BEGIN_NAMESPACE
@@ -18,6 +25,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void setQR();
 private slots:
 
 
@@ -26,6 +34,18 @@ private slots:
     void on_add_iskander_clicked();
 
     void on_delete_iskander_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_lineEdit_textChanged(const QString &arg1);
+
+    void on_pushButtonTrier_clicked();
+
+
+
+    void on_pushButtonPdfrec_clicked();
+
+    void on_pushButtonStat_clicked();
 
 private:
     Ui::MainWindow *ui;

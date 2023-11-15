@@ -1,5 +1,10 @@
-QT       += core gui sql
+QT       += core gui sql charts serialport network printsupport
 
+QT       += multimedia multimediawidgets
+QT       += widgets
+QT +=svg
+QT +=charts
+QT +=printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -19,11 +24,17 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
+    qrcode.cpp \
+    qrcodegeneratordemo.cpp \
+    qrcodegeneratorworker.cpp \
+    qrwidget.cpp \
     reclamation.cpp
 
 HEADERS += \
     connection.h \
     mainwindow.h \
+    qrcode.h \
+    qrwidget.h \
     reclamation.h
 
 FORMS += \

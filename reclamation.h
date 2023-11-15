@@ -35,6 +35,10 @@ public:
     bool ajouter();
     bool supprimer(int);
     bool modifier(int);
+    Reclamation GetOneByID(int id);
+
+    QSqlQueryModel * Tri(QString cls,QString colonne);
+    QSqlQueryModel * recherche(QString cls);
 
 
 
